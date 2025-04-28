@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KenGym Fitness</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <h1>KenGym Fitness</h1>
+            <div class="preferences-controls">
+                <div class="theme-switcher-wrapper">
+                    <label for="theme-switcher" class="sr-only">Toggle Dark Mode</label>
+                    <button id="theme-switcher" class="theme-toggle-button" aria-label="Toggle dark mode">
+                        <span class="toggle-icon"></span>
+                    </button>
+                </div>
+                <div class="language-switcher-wrapper">
+                    <label for="language-switcher">Language:</label>
+                    <select id="language-switcher">
+                        <option value="en" lang="en">English</option>
+                        <option value="fr" lang="fr">Français</option>
+                        <option value="es" lang="es">Swahili</option>
+                        <option value="es" lang="es">Español</option>
+                    </select>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="nav-item"><a href="#" >Home</a></li>
+                    <li class="nav-item"><a href="#" >Classes</a></li>
+                    <li class="nav-item"><a href="#" >Trainers</a></li>
+                    <li class="nav-item"><a href="#" >Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h2 data-i18n="hero_title">Unleash Your Inner Strength</h2>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Expert guidance and state-of-the-art facilities to help you achieve your fitness goals.</p>
+                <a href="#" class="button primary-button" id="explore-button" data-i18n="discover_more">Discover More</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container grid grid-3">
+                <div class="feature-box">
+                    <i class="icon icon-dumbbell"></i>
+                    <h3 data-i18n="feature_personalized_training_title">Personalized Training</h3>
+                    <p data-i18n="feature_personalized_training_desc">Custom workout plans designed by certified trainers to match your unique fitness level and objectives.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="icon icon-heart-rate"></i>
+                    <h3 data-i18n="feature_progress_tracking_title">Progress Tracking</h3>
+                    <p data-i18n="feature_progress_tracking_desc">Monitor your achievements and stay motivated with detailed tracking of your workouts and progress.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="icon icon-nutrition"></i>
+                    <h3 data-i18n="feature_nutrition_guidance_title">Nutrition Guidance</h3>
+                    <p data-i18n="feature_nutrition_guidance_desc">Complement your training with expert nutritional advice to optimize your results and overall well-being.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container cta-content">
+                
+                <div class="cta-text">
+                    <h3 data-i18n="cta_title">Ready to Transform Your Life?</h3>
+                    <p data-i18n="cta_subtitle">Take the first step towards a healthier and stronger you. Join Ironclad Fitness today!</p>
+                    <a href="#" class="button secondary-button" id="sign-up-button" data-i18n="sign_up_now">Sign Up Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 KenGym Fitness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease-in-out;
+    text-align: center;
+}
+
+.primary-button {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.secondary-button {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+}
+
+.secondary-button:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Header */
+.site-header {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header .container.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preferences-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.theme-switcher-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-switcher-wrapper label {
+    margin-right: 0.5rem;
+}
+
+.language-switcher-wrapper select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.main-nav {
+    order: 1;
+    /* Move navigation to the right by default */
+}
+
+.preferences-controls {
+    order: 2;
+    /* Move preferences controls to the right of the logo */
+}
+
+.site-header h1 {
+    order: 0;
+    /* Keep the logo at the beginning */
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    color: #007bff;
+}
+
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('gym-hero.jpg');
+    /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for better text readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.feature-box {
+    background-color: #e9ecef;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-image-wrapper {
+    margin-bottom: 2rem;
+}
+
+.cta-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cta-text {
+    margin-bottom: 2rem;
+}
+
+.cta-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Theme Switcher Styling (Moved to header) */
+.site-header .theme-switcher-wrapper {
+    margin-left: auto;
+    /* Push to the right */
+}
+
+.site-header .theme-switcher-wrapper label {
+    margin-right: 0.5rem;
+}
+
+.site-header .theme-toggle-button {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.site-header .theme-toggle-button::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.site-header .theme-toggle-button.dark-mode::before {
+    transform: translateX(25px);
+}
+
+.site-header .theme-toggle-button:hover {
+    background-color: #545b62;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated-element.pulse {
+    animation: pulse 2s infinite alternate;
+}
+
+.animated-element.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated-element.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-mode .site-header {
+    background-color: #343a40;
+    color: #fff;
+}
+
+body.dark-mode .site-header h1 {
+    color: #fff;
+}
+
+body.dark-mode .site-header .theme-toggle-button {
+    background-color: #495057;
+}
+
+body.dark-mode .site-header .theme-toggle-button::before {
+    background-color: #343a40;
+}
+
+body.dark-mode .main-nav a {
+    color: #fff;
+}
+
+body.dark-mode .main-nav a:hover,
+body.dark-mode .main-nav a:focus {
+    color: #007bff;
+}
+
+body.dark-mode .features {
+    background-color: #282c34;
+}
+
+body.dark-mode .feature-box {
+    background-color: #343a40;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .call-to-action {
+    background-color: #212529;
+}
+
+body.dark-mode .preferences {
+    background-color: #282c34;
+    color: #fff;
+}
+
+body.dark-mode .site-footer {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header .container.header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-header h1 {
+        margin-bottom: 1rem;
+    }
+
+    .preferences-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        gap: 0.5rem;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #343a40;
+        padding: 1rem;
+        display: none;
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav li {
+        margin-bottom: 0.5rem;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 5rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-image-wrapper {
+        margin-bottom: 1.5rem;
+    }
+}
